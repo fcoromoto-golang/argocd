@@ -15,7 +15,7 @@ jobs:
       - name: Build and Push to dockerhub
         uses: docker/build-push-action@v1
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: fcoromoto
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: fcoromoto/go-app
           tags: ${{ github.sha }}, latest
