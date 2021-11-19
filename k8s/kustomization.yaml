@@ -1,0 +1,12 @@
+# kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- deployment.yaml
+- service.yaml
+
+namespace: go-app
+images:
+- name: fcoromoto/go-app
+  newName: fcoromoto/go-app
+  newTag: v1
