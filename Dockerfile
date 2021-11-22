@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:experimental
 FROM golang:1.17 as build
 
 WORKDIR /app
