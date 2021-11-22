@@ -32,9 +32,9 @@ jobs:
       - run: |
           cd k8s
           kustomize edit set image  fcoromoto/go-app:${GITHUB_SHA}
-          git add .
-          git commit -m "Set ` fcoromoto/go-app` image tag to `${GITHUB_SHA}`"
-          git push
+#          git add .
+#          git commit -m "Set ` fcoromoto/go-app` image tag to `${GITHUB_SHA}`"
+#          git push
 
 #      - name: kustomization
 #        uses: imranismail/setup-kustomize@v1
@@ -47,11 +47,11 @@ jobs:
 #            kustomize edit set image fcoromoto/go-app:${{ github.sha }}
 #            cat kustomization.yaml
 #
-#      - name: commit
-#        run: |
-#            git config --local user.email "actions@github.com"
-#            git config --local user.name "Deploy"
-#            git commit --am "Atualizando versao da imagem k8s"
+      - name: commit
+        run: |
+            git config --local user.email "actions@github.com"
+            git config --local user.name "Deploy"
+            git commit --am "Atualizando versao da imagem k8s"
 #
-#      - name: push
-#        uses: ad-m/github-push-action@master
+      - name: push
+        uses: ad-m/github-push-action@master
