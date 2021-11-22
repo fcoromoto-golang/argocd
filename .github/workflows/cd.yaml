@@ -32,12 +32,12 @@ jobs:
       - run: |
           cd k8s
           kustomize edit set image fcoromoto/go-app:${GITHUB_SHA}
-#
+
       - name: commit
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "Deploy"
           git commit -am "Atualizando versao da imagem k8s"
-#
+
       - name: push
         uses: ad-m/github-push-action@master
