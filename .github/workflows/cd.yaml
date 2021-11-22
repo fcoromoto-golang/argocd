@@ -35,6 +35,7 @@ jobs:
 
       - name: update k8s
         run: |
+            cd k8s
             kustomize edit set image fcoromoto/go-app:${{ github.sha }}
             cat kustomization.yaml
 
