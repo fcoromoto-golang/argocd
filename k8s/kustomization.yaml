@@ -8,4 +8,4 @@ resources:
 namespace: go-app
 images:
 - name: fcoromoto/go-app
-  newTag: da2d9f4b254d556040ee15cc6248c4c0d5e0c201
+  newTag: 111e90d3bb24f94ddeb1c451b5ce54a76f56430d
